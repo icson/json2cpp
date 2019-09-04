@@ -13,6 +13,14 @@ compiler:
 #    - gcc-4.8
 #    - g++-4.8
 #    - libboost-dev
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports # cmake 3.2.3 / doxygen 1.8.3
+    packages:
+      - cmake
+      - cmake-data
+
 before_install:
   # pyparsing
   - sudo easy_install pyparsing
